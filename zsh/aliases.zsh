@@ -55,11 +55,15 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
+alias gbd='git bd'
+alias gcb='git cb'
 alias gcm='git ci -m'
+alias gcam='git ca'
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
+alias gdfh='git dfh'
 alias ga='git add -A'
 alias guns='git unstage'
 alias gunc='git uncommit'
@@ -81,17 +85,18 @@ alias gf='git fetch'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
-alias gbd='git b -D -w'
 alias gdc='git diff --cached -w'
 alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
 alias gplr='git pull --rebase'
+alias gpr='command git push origin HEAD && make_me_a_pr_'
 alias gps='git push'
 alias gpsh='git push'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
 alias grsh='git reset --hard'
+alias grt='git fetch upstream && git rebase upstream $(get_git_branch)'
 alias gcln='git clean'
 alias gclndf='git clean -df'
 alias gclndfx='git clean -dfx'
@@ -155,12 +160,24 @@ alias sp='sprintly'
 # spb = sprintly branch - create a branch automatically based on the bug you're working on
 alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
 
-alias hpr='hub pull-request'
 alias grb='git recent-branches'
 
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Sudo hack (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
+alias sudo='sudo '
+
+# Update alias so it's more like Arch Linux
+alias updatedb='/usr/libexec/locate.updatedb'
+
+# Euclid <3
+alias euclid='ssh euclidh'
+
+# Watson :3
+alias wake_watson='wakeonlan 50:46:5d:70:be:b0'
+alias watson='ssh watson'
 
 alias dbtp='spring rake db:test:prepare'
 alias dbm='spring rake db:migrate'

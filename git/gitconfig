@@ -25,6 +25,7 @@
 
   # branch
   b = branch -v                     # branch (verbose)
+  bd = branch -D                    # branch delete
 
   # commit
   c = commit -m                     # commit with message
@@ -35,7 +36,7 @@
 
   # checkout
   co = checkout                     # checkout
-  nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
+  cb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 
   # cherry-pick
   cp = cherry-pick -x               # grab a change from a branch
@@ -43,6 +44,7 @@
   # diff
   d = diff                          # diff unstaged changes
   dc = diff --cached                # diff staged changes
+  dfh = diff --full-index HEAD      # diff against HEAD
   last = diff HEAD^                 # diff last committed change
 
   # log
