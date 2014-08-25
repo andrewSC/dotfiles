@@ -182,6 +182,11 @@ alias euclid='ssh euclidw'
 alias wake_watson='wakeonlan 50:46:5d:70:be:b0'
 alias watson='ssh watson'
 
+# Bodega related stuff
+alias dev23="cd ~/marionette/dev23;vagrant up && ssh andrew@192.168.56.101"
+alias vssh='cd /Users/crerar/marionette/dev23 && vagrant ssh'
+alias jssh='ssh -l andrew -i ~/.ssh/id_rsa -t be-adm1.be.net ssh '
+
 alias dbtp='spring rake db:test:prepare'
 alias dbm='spring rake db:migrate'
 alias dbmr='spring rake db:migrate:redo'
