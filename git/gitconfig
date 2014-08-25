@@ -43,6 +43,7 @@
 
   # diff
   d = diff                          # diff unstaged changes
+  df = diff --full-index master     # diff changes against master
   dc = diff --cached                # diff staged changes
   dfh = diff --full-index HEAD      # diff against HEAD
   last = diff HEAD^                 # diff last committed change

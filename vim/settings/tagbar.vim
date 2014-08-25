@@ -1,0 +1,1 @@
+nmap ,T :TagbarToggle<CR>
