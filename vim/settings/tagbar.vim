@@ -1,1 +1,1 @@
-nmap ,T :TagbarToggle<CR>
+nmap ,T :TagbarOpenAutoClose<CR>
