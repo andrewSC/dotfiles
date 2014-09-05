@@ -176,7 +176,7 @@ alias sudo='sudo '
 alias updatedb='/usr/libexec/locate.updatedb'
 
 # Euclid <3
-alias euclid='ssh euclidw'
+alias euclid='ssh euclidh'
 
 # Watson :3
 alias wake_watson='wakeonlan 50:46:5d:70:be:b0'
