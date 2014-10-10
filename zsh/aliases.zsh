@@ -17,6 +17,7 @@ alias psr='ps aux | grep ruby'
 
 # Moving around
 alias cdb='cd -'
+alias cls='clear;ls'
 
 # Show human friendly numbers and colors
 alias df='df -h'
@@ -94,7 +95,7 @@ alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gpr='command git push origin HEAD && make_me_a_pr'
 alias gps='git push'
-alias gpsh='git push'
+alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
 alias grsh='git reset --hard'
@@ -192,3 +193,6 @@ alias dbm='spring rake db:migrate'
 alias dbmr='spring rake db:migrate:redo'
 alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
+
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
