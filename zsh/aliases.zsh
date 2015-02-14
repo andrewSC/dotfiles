@@ -139,54 +139,8 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
-# Ruby
-alias c='rails c' # Rails 3
-alias co='script/console --irb=pry' # Rails 2
-alias ts='thin start'
-alias ms='mongrel_rails start'
-alias tfdl='tail -f log/development.log'
-alias tftl='tail -f log/test.log'
-
 alias ka9='killall -9'
 alias k9='kill -9'
-
-# Gem install
-alias sgi='sudo gem install --no-ri --no-rdoc'
-
-# TODOS
-# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
-# to find the note called 'todo'
-alias todo='open nvalt://find/todo'
-
-# Forward port 80 to 3000
-alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
-
-alias rdm='rake db:migrate'
-alias rdmr='rake db:migrate:redo'
-
-# Zeus
-alias zs='zeus server'
-alias zc='zeus console'
-
-# Rspec
-alias rs='rspec spec'
-alias sr='spring rspec'
-alias src='spring rails c'
-alias srgm='spring rails g migration'
-alias srdm='spring rake db:migrate'
-alias srdt='spring rake db:migrate'
-alias srdmt='spring rake db:migrate db:test:prepare'
-
-# Sprintly - https://github.com/nextbigsoundinc/Sprintly-GitHub
-alias sp='sprintly'
-# spb = sprintly branch - create a branch automatically based on the bug you're working on
-alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
-
-alias grb='git recent-branches'
-
-# Finder
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Sudo hack (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
 alias sudo='sudo '
@@ -194,23 +148,7 @@ alias sudo='sudo '
 # Update alias so it's more like Arch Linux
 alias updatedb='/usr/libexec/locate.updatedb'
 
-# Euclid <3
-alias euclid='ssh euclidw'
+# Caladan <3
+alias caladanup='VBoxManage startvm Arch\ Linux --type headless'
 
-# Watson :3
-alias wake_watson='wakeonlan 50:46:5d:70:be:b0'
-alias watson='ssh watson'
 
-# Bodega related stuff
-alias dev23="cd ~/bodega/dev23;vagrant up && vagrant ssh"
-alias vssh='cd /Users/crerar/bodega/dev23 && vagrant ssh'
-alias jssh='ssh -l andrew -i ~/.ssh/id_rsa -t be-adm1.be.net ssh '
-
-alias dbtp='spring rake db:test:prepare'
-alias dbm='spring rake db:migrate'
-alias dbmr='spring rake db:migrate:redo'
-alias dbmd='spring rake db:migrate:down'
-alias dbmu='spring rake db:migrate:up'
-
-# Homebrew
-alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
