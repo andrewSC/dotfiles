@@ -162,4 +162,6 @@ alias tagall='sh /Users/crerar/.bash_scripts/tag_indexer_net.sh && sh /Users/cre
 alias vssh="ssh -p 2222 andrew@127.0.0.1"
 alias dev23="cd ~/bodega/dev23 && vagrant up && vssh"
 
-
+# Docker
+alias dup="boot2docker up"
+alias dps="boot2docker ps"
