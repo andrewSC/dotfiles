@@ -157,6 +157,7 @@ alias watch-net='cd ~/Dev/be.net && watcher ~/Dev/be.net/ sbelsky@dev23.be.lan:/
 
 # Ctags indexer
 alias tagall='sh /Users/crerar/.bash_scripts/tag_indexer_net.sh && sh /Users/crerar/.bash_scripts/tag_indexer_ccn.sh && sh /Users/crerar/.bash_scripts/tag_indexer_core.sh'
+alias ptagall='sh /Users/crerar/.bash_scripts/tag_indexer_pro2_view.sh && sh /Users/crerar/.bash_scripts/tag_indexer_pro2_api.sh'
 
 # Vagrant
 alias vssh="ssh -p 2222 andrew@127.0.0.1"
