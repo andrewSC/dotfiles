@@ -156,12 +156,12 @@ alias watch-ccn='cd ~/Dev/ccn && watcher ~/Dev/ccn/ sbelsky@dev23.be.lan:/var/ww
 alias watch-net='cd ~/Dev/be.net && watcher ~/Dev/be.net/ sbelsky@dev23.be.lan:/var/www/vhosts/network/sandbox/'
 
 # Ctags indexer
-alias tagall='sh /Users/crerar/.bash_scripts/tag_indexer_net.sh && sh /Users/crerar/.bash_scripts/tag_indexer_ccn.sh && sh /Users/crerar/.bash_scripts/tag_indexer_core.sh'
-alias ptagall='sh /Users/crerar/.bash_scripts/tag_indexer_pro2_view.sh && sh /Users/crerar/.bash_scripts/tag_indexer_pro2_api.sh'
+alias tagall='sh /Users/crerar/.bash_scripts/tag_scripts/tag_indexer_net.sh && sh /Users/crerar/.bash_scripts/tag_scripts/tag_indexer_ccn.sh && sh /Users/crerar/.bash_scripts/tag_scripts/tag_indexer_core.sh'
+alias ptagall='sh /Users/crerar/.bash_scripts/tag_scripts/tag_indexer_pro2_view.sh && sh /Users/crerar/.bash_scripts/tag_scripts/tag_indexer_pro2_api.sh'
 
 # Vagrant
 alias vssh="ssh -p 2222 andrew@127.0.0.1"
-alias dev23="cd ~/bodega/dev23 && vagrant up && vssh"
+alias dev23="cd ~/bodega/dev && vagrant up && vssh"
 
 # Docker
 alias dup="boot2docker up"

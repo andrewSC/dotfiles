@@ -7,7 +7,7 @@ if executable('ag')
     \ 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 1
 else
   " Fall back to using git ls-files if Ag is not available
   let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
@@ -17,6 +17,8 @@ endif
 " Default to filename searches - so that appctrl will find application
 " controller
 let g:ctrlp_by_filename = 1
+
+let g:ctrlp_working_path_mode = 'ra'
 
 " Don't jump to already open window. This is annoying if you are maintaining
 " several Tab workspaces and want to open two windows into the same file.

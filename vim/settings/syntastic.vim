@@ -7,4 +7,5 @@ let g:syntastic_auto_loc_list=1
 "don't care about warnings
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 "enable JS checkers
-let g:syntastic_javascript_checkers=['jshint', 'jscs']
+"let g:syntastic_javascript_checkers=['jshint']
+"let g:syntastic_javascript_jshint_args = '--config /Users/crerar/Dev/behance/pro2-ui/.jshintrc'

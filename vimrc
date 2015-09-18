@@ -109,5 +109,11 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
+" ================ Ctags  ===========================
+set tags=./tags;/,tags;/
+
+" ================ Mac System Clipboard ==================
+set clipboard=unnamed
+
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
