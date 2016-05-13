@@ -8,5 +8,14 @@ bindkey '^r' history-incremental-search-backward    # [Ctrl-r] - Search backward
 # emacs style
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+<<<<<<< HEAD
 bindkey '\e\e[D' backward-word
 bindkey '\e\e[C' forward-word
+=======
+
+# Make numpad enter work
+bindkey -s "^[Op" "0"
+bindkey -s "^[Ol" "."
+bindkey -s "^[OM" "^M"
+
+>>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46

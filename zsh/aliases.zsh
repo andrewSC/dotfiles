@@ -44,8 +44,13 @@ fi
 alias lsg='ll | grep'
 
 # Alias Editing
+TRAPHUP() {
+  source $yadr/zsh/aliases.zsh
+}
+
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
+alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
 # vim using
 mvim --version > /dev/null 2>&1
@@ -62,7 +67,6 @@ alias ve='vim ~/.vimrc'
 
 # zsh profile editing
 alias ze='vim ~/.zshrc'
-alias zr='source ~/.zshrc'
 
 # Git Aliases
 alias gs='git status'
@@ -85,6 +89,7 @@ alias gcp='git cp'
 alias gdf='git df'
 alias gdfh='git dfh'
 alias ga='git add -A'
+alias gap='git add -p'
 alias guns='git unstage'
 alias gunc='git uncommit'
 alias guu='git checkout master && git fetch upstream && git pull upstream master'
@@ -103,10 +108,19 @@ alias glg='git l'
 alias glog='git l'
 alias co='git co'
 alias gf='git fetch'
+alias gfp='git fetch --prune'
+alias gfa='git fetch --all'
+alias gfap='git fetch --all --prune'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
+<<<<<<< HEAD
+=======
+alias gbd='git b -D -w'
+# Staged and cached are the same thing
+>>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46
 alias gdc='git diff --cached -w'
+alias gds='git diff --staged -w'
 alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
@@ -127,6 +141,7 @@ alias gsmu='git submodule update'
 alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
+alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Common shell functions
 alias less='less -r'
@@ -139,6 +154,7 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
+<<<<<<< HEAD
 alias ka9='killall -9'
 alias k9='kill -9'
 
@@ -152,3 +168,73 @@ alias updatedb='/usr/libexec/locate.updatedb'
 alias caladanup='VBoxManage startvm Arch\ Linux --type headless'
 
 
+=======
+# Ruby
+alias c='rails c' # Rails 3
+alias co='script/console' # Rails 2
+alias cod='script/console --debugger'
+
+#If you want your thin to listen on a port for local VM development
+#export VM_IP=10.0.0.1 <-- your vm ip
+alias ts='thin start -a ${VM_IP:-127.0.0.1}'
+alias ms='mongrel_rails start'
+alias tfdl='tail -f log/development.log'
+alias tftl='tail -f log/test.log'
+
+alias ka9='killall -9'
+alias k9='kill -9'
+
+# Gem install
+alias sgi='sudo gem install --no-ri --no-rdoc'
+
+# TODOS
+# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
+# to find the note called 'todo'
+alias todo='open nvalt://find/todo'
+
+# Forward port 80 to 3000
+alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
+
+alias rdm='rake db:migrate'
+alias rdmr='rake db:migrate:redo'
+
+# Zeus
+alias zs='zeus server'
+alias zc='zeus console'
+alias zr='zeus rspec'
+alias zrc='zeus rails c'
+alias zrs='zeus rails s'
+alias zrdbm='zeus rake db:migrate'
+alias zrdbtp='zeus rake db:test:prepare'
+
+# Rspec
+alias rs='rspec spec'
+alias sr='spring rspec'
+alias src='spring rails c'
+alias srgm='spring rails g migration'
+alias srdm='spring rake db:migrate'
+alias srdt='spring rake db:migrate'
+alias srdmt='spring rake db:migrate db:test:prepare'
+
+
+# Sprintly - https://github.com/nextbigsoundinc/Sprintly-GitHub
+alias sp='sprintly'
+# spb = sprintly branch - create a branch automatically based on the bug you're working on
+alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
+
+alias hpr='hub pull-request'
+alias grb='git recent-branches'
+
+# Finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+alias dbtp='spring rake db:test:prepare'
+alias dbm='spring rake db:migrate'
+alias dbmr='spring rake db:migrate:redo'
+alias dbmd='spring rake db:migrate:down'
+alias dbmu='spring rake db:migrate:up'
+
+# Homebrew
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+>>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46
