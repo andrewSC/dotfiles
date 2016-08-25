@@ -1,0 +1,1 @@
+nmap ,T :TagbarOpenAutoClose<CR>

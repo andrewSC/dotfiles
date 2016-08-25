@@ -6,6 +6,9 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_camel_case = 1
 let g:neocomplete#enable_smart_case = 1
 
+" Disable the preview/function documentation window during autocomplete
+set completeopt-=preview
+
 " Default # of completions is 100, that's crazy.
 let g:neocomplete#max_list = 5
 

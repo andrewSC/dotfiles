@@ -7,6 +7,10 @@ let g:syntastic_auto_loc_list=1
 "don't care about warnings
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
+"set the line length for python
+let g:syntastic_python_flake8_args='--ignore=E501 --max-line-length=100'
+let g:syntastic_python_pylint_post_args="--max-line-length=100"
+
 " I have no idea why this is not working, as it used to
 " be a part of syntastic code but was apparently removed
 " This will make syntastic find the correct ruby specified by mri
@@ -20,4 +24,4 @@ endfunction
 
 if !exists("g:syntastic_ruby_exec")
     let g:syntastic_ruby_exec = s:FindRubyExec()
-endif
+  endif
