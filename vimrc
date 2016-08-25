@@ -18,6 +18,8 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set ttyfast
+set lazyredraw
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -115,3 +117,12 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+" Set system clipboard
+set clipboard=unnamed
+
+" Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Set the default Ctags location
+set tags=".git/tags";

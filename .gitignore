@@ -14,3 +14,4 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
+zsh/private_aliases.zsh
