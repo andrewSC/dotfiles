@@ -226,3 +226,6 @@ alias sudo='sudo '
 
 # Update alias so it's more like Arch Linux
 alias updatedb='/usr/libexec/locate.updatedb'
+
+# Run VM in headless mode
+alias caladanup='VBoxHeadless --startvm ccc7edaf-244d-4464-805f-571136878954'
