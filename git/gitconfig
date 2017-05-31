@@ -42,11 +42,12 @@
   cp = cherry-pick -x               # grab a change from a branch
 
   # diff
-  d = diff                              # diff unstaged changes
-  df = diff --full-index --color master # diff changes against master
-  dc = diff --cached                    # diff staged changes
-  dfh = diff --full-index --color HEAD  # diff against HEAD
-  last = diff HEAD^                     # diff last committed change
+  d = diff                                  # diff unstaged changes
+  df = diff --full-index --color master     # diff changes against master
+  dfw = diff --full-index --color -w master # diff changes against master with whitespace removed
+  dc = diff --cached                        # diff staged changes
+  dfh = diff --full-index --color HEAD      # diff against HEAD
+  last = diff HEAD^                         # diff last committed change
 
   # log
   l = log --graph --date=short --show-signature
@@ -134,3 +135,5 @@
 	signingkey = 838941A6A13F5301
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg2

@@ -87,6 +87,7 @@ alias gco='git co'
 alias gcp='git cp'
 alias gdf='git df | diff-highlight | diff-so-fancy | less'
 alias gdfh='git dfh | diff-highlight | diff-so-fancy | less'
+alias gdfhw='git dfw | diff-highlight | diff-so-fancy | less'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
@@ -228,4 +229,4 @@ alias sudo='sudo '
 alias updatedb='/usr/libexec/locate.updatedb'
 
 # Run VM in headless mode
-alias caladanup='VBoxHeadless --startvm ccc7edaf-244d-4464-805f-571136878954'
+alias caladanup='VBoxHeadless --startvm 1cea2fda-70b3-4ec0-a4ac-16df418a553a'

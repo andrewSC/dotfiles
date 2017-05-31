@@ -12,7 +12,7 @@ alias -g G='| grep' # now you can do: ls foo G something
 # Functions
 #
 # (f)ind by (n)ame
-# usage: fn foo 
+# usage: fn foo
 # to find all files containing 'foo' in the name
 function fn() { ls **/*$1* }
 
@@ -46,14 +46,21 @@ function get_git_branch() {
   printf $branch_name
 }
 
-function pb() {
+# ptpb.pw create paste from stdin
+function pbc() {
   curl -F "c=@${1:--}" https://ptpb.pw/
 }
 
+# ptpb.pw create paste from specified file (which is given as url to some file on the internet)
 function pbs() {
   url=$1
   filename=$(basename "$url")
   filelocation="/tmp/$filename"
   wget -O "$filelocation" "$url"
   pb "$filelocation"
+}
+
+# ptpb.pw url minifier/shortener (which is given in stdin)
+function pbm() {
+  curl -F "c=@-" https://ptpb.pw/u
 }

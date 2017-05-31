@@ -12,6 +12,7 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_javascript_checkers = ['eslint']
 
 "set the line length for python
+let g:syntastic_python_checkers = ['flake8', 'python', 'pyflakes']
 let g:syntastic_python_flake8_args='--ignore=E501 --max-line-length=100'
 let g:syntastic_python_pylint_post_args="--max-line-length=100"
 
