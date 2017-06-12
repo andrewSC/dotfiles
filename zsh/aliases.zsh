@@ -78,7 +78,6 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
-alias gbd='git bd'
 alias gcb='git cb'
 alias gcm='git ci -m'
 alias gcam='git ca'
@@ -86,8 +85,9 @@ alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
-alias gdf='git df'
-alias gdfh='git dfh'
+alias gdf='git df | diff-highlight | diff-so-fancy | less'
+alias gdfh='git dfh | diff-highlight | diff-so-fancy | less'
+alias gdfhw='git dfw | diff-highlight | diff-so-fancy | less'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
@@ -114,11 +114,8 @@ alias gfap='git fetch --all --prune'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
-<<<<<<< HEAD
-=======
 alias gbd='git b -D -w'
 # Staged and cached are the same thing
->>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
 alias gpub='grb publish'
@@ -139,6 +136,7 @@ alias gsm='git submodule'
 alias gsmi='git submodule init'
 alias gsmu='git submodule update'
 alias gt='git t'
+alias guu='git checkout master && git fetch upstream && git pull upstream master'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
@@ -154,21 +152,9 @@ alias cl='clear'
 # Zippin
 alias gz='tar -zcvf'
 
-<<<<<<< HEAD
 alias ka9='killall -9'
 alias k9='kill -9'
 
-# Sudo hack (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
-alias sudo='sudo '
-
-# Update alias so it's more like Arch Linux
-alias updatedb='/usr/libexec/locate.updatedb'
-
-# Caladan <3
-alias caladanup='VBoxManage startvm Arch\ Linux --type headless'
-
-
-=======
 # Ruby
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
@@ -206,6 +192,7 @@ alias zrc='zeus rails c'
 alias zrs='zeus rails s'
 alias zrdbm='zeus rake db:migrate'
 alias zrdbtp='zeus rake db:test:prepare'
+alias zzz='rm .zeus.sock; pkill zeus; zeus start'
 
 # Rspec
 alias rs='rspec spec'
@@ -237,4 +224,9 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
->>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46
+
+# Sudo hack (http://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
+alias sudo='sudo '
+
+# Update alias so it's more like Arch Linux
+alias updatedb='/usr/libexec/locate.updatedb'

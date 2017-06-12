@@ -6,10 +6,17 @@ let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 "don't care about warnings
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-<<<<<<< HEAD
 "enable JS checkers
 let g:syntastic_javascript_checkers=['jshint', 'jscs']
-=======
+
+" Default to eslint. If you need jshint, you can override this in
+" ~/.vimrc.after
+let g:syntastic_javascript_checkers = ['eslint']
+
+"set the line length for python
+let g:syntastic_python_checkers = ['flake8', 'python', 'pyflakes']
+let g:syntastic_python_flake8_args='--ignore=E501 --max-line-length=100'
+let g:syntastic_python_pylint_post_args="--max-line-length=100"
 
 " I have no idea why this is not working, as it used to
 " be a part of syntastic code but was apparently removed
@@ -25,4 +32,3 @@ endfunction
 if !exists("g:syntastic_ruby_exec")
     let g:syntastic_ruby_exec = s:FindRubyExec()
 endif
->>>>>>> 22dd9da9d610d02dfdab8b1b1ad88cb71a0b3c46

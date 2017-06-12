@@ -28,8 +28,8 @@
   bd = branch -D                    # branch delete
 
   # commit
-  c = commit -m                     # commit with message
-  ca = commit -am                   # commit all with message
+  c = commit -S -m                  # commit with message
+  ca = commit -S -am                # commit all with message
   ci = commit                       # commit
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
@@ -42,18 +42,19 @@
   cp = cherry-pick -x               # grab a change from a branch
 
   # diff
-  d = diff                          # diff unstaged changes
-  df = diff --full-index master     # diff changes against master
-  dc = diff --cached                # diff staged changes
-  dfh = diff --full-index HEAD      # diff against HEAD
-  last = diff HEAD^                 # diff last committed change
+  d = diff                                  # diff unstaged changes
+  df = diff --full-index --color master     # diff changes against master
+  dfw = diff --full-index --color -w master # diff changes against master with whitespace removed
+  dc = diff --cached                        # diff staged changes
+  dfh = diff --full-index --color HEAD      # diff against HEAD
+  last = diff HEAD^                         # diff last committed change
 
   # log
-  l = log --graph --date=short
-  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
-  simple = log --pretty=format:\" * %s\"
-  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+  l = log --graph --date=short --show-signature
+  changes = log --show-signature --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  short = log --show-signature --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
+  simple = log --show-signature --pretty=format:\" * %s\"
+  shortnocolor = log --show-signature --pretty=format:\"%h %cr %cn %s\"
 
   # pull
   pl = pull                         # pull
@@ -71,7 +72,7 @@
   # reset
   unstage = reset HEAD              # remove files from index (tracking)
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
-  filelog = log -u                  # show changes to a file
+  filelog = log --show-signature -u # show changes to a file
   mt = mergetool                    # fire up the merge tool
 
   # stash
@@ -131,3 +132,10 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	name = Andrew Crerar
+	email = andrew@crerar.io
+[commit]
+	gpgsign = false
+[gpg]
+	program = gpg2

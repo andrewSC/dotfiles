@@ -28,10 +28,10 @@ local current_tty="$(tty)";
 
   if [ -z "$2" ]; then
     echo "Creating pull request against @@$1@@..."
-    hub pull-request -b $1 -h "andrewsc:$(get_git_branch)" > $current_tty
+    hub pull-request -o -b $1 -h "andrewsc:$(get_git_branch)" > $current_tty
   else
     echo "Creating pull request against @@$1@@ from @@$2@@..."
-    hub pull-request -b $1 -h $2 > $current_tty
+    hub pull-request -o -b $1 -h $2 > $current_tty
   fi
 }
 
@@ -44,4 +44,23 @@ function get_git_branch() {
   branch_name="(unknown)"
 
   printf $branch_name
+}
+
+# ptpb.pw create paste from stdin
+function pbc() {
+  curl -F "c=@${1:--}" https://ptpb.pw/
+}
+
+# ptpb.pw create paste from specified file (which is given as url to some file on the internet)
+function pbs() {
+  url=$1
+  filename=$(basename "$url")
+  filelocation="/tmp/$filename"
+  wget -O "$filelocation" "$url"
+  pb "$filelocation"
+}
+
+# ptpb.pw url minifier/shortener (which is given in stdin)
+function pbm() {
+  curl -F "c=@-" https://ptpb.pw/u
 }
