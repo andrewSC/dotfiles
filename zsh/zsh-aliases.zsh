@@ -57,7 +57,7 @@ function pbs() {
   filename=$(basename "$url")
   filelocation="/tmp/$filename"
   wget -O "$filelocation" "$url"
-  pb "$filelocation"
+  pbc "$filelocation"
 }
 
 # ptpb.pw url minifier/shortener (which is given in stdin)

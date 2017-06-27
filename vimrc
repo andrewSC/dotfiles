@@ -129,3 +129,10 @@ set tags=".git/tags";
 
 " Set python mode to python3
 let g:pymode_python = 'python3'
+
+" Perf improvement for long lines
+" (only highlight the first 200 chars of a line)
+set synmaxcol=200
+
+" Auto resize splits when the editor is resized
+autocmd VimResized * wincmd =
