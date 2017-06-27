@@ -62,5 +62,5 @@ function pbs() {
 
 # ptpb.pw url minifier/shortener (which is given in stdin)
 function pbm() {
-  curl -F "c=@-" https://ptpb.pw/u
+  print $1 | curl -F "c=@-" https://ptpb.pw/u
 }
