@@ -135,7 +135,8 @@
 [user]
 	name = Andrew Crerar
 	email = andrew@crerar.io
+	signingkey = ADE7EE4CC351E3AC
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
 	program = gpg2
