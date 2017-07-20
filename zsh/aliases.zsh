@@ -230,3 +230,6 @@ alias updatedb='/usr/libexec/locate.updatedb'
 
 # Run VM in headless mode
 alias caladanup='VBoxHeadless --startvm 1cea2fda-70b3-4ec0-a4ac-16df418a553a'
+
+# Connect to Arvon via Mosh
+alias moshme='mosh -p 60658 arvon'
