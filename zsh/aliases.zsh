@@ -85,9 +85,9 @@ alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
-alias gdf='git df | diff-highlight | diff-so-fancy | less'
-alias gdfh='git dfh | diff-highlight | diff-so-fancy | less'
-alias gdfhw='git dfw | diff-highlight | diff-so-fancy | less'
+alias gdf='git df | diff-so-fancy | less'
+alias gdfh='git dfh | diff-so-fancy | less'
+alias gdfhw='git dfw | diff-so-fancy | less'
 alias ga='git add -A'
 alias gap='git add -p'
 alias guns='git unstage'
@@ -114,7 +114,8 @@ alias gfap='git fetch --all --prune'
 alias gfch='git fetch'
 alias gd='git diff'
 alias gb='git b'
-alias gbd='git b -D -w'
+alias gbd='git bd'
+
 # Staged and cached are the same thing
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
@@ -230,3 +231,6 @@ alias sudo='sudo '
 
 # Update alias so it's more like Arch Linux
 alias updatedb='/usr/libexec/locate.updatedb'
+
+# Run VM in headless mode
+alias caladanup='VBoxHeadless --startvm 1cea2fda-70b3-4ec0-a4ac-16df418a553a'

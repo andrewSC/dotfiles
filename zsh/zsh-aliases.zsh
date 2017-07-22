@@ -57,10 +57,10 @@ function pbs() {
   filename=$(basename "$url")
   filelocation="/tmp/$filename"
   wget -O "$filelocation" "$url"
-  pb "$filelocation"
+  pbc "$filelocation"
 }
 
 # ptpb.pw url minifier/shortener (which is given in stdin)
 function pbm() {
-  curl -F "c=@-" https://ptpb.pw/u
+  print $1 | curl -F "c=@-" https://ptpb.pw/u
 }
