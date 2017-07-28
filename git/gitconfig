@@ -103,7 +103,7 @@
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+	tool = diffmerge
 [apply]
   whitespace = nowarn
 [branch]
@@ -123,6 +123,7 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
+	tool = diffmerge
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -137,3 +138,10 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+[hub]
+	host = github.ncsu.edu
+[difftool "diffmerge"]
+	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"

@@ -20,6 +20,7 @@ function fn() { ls **/*$1* }
 function make_me_a_pr() {
 
 local current_tty="$(tty)";
+local repo_owner=$(git remote show -n origin | grep Fetch | perl -nle "print $& if m{(\w*?)(?=\/)}");
 
   if [ -z "$1" ]; then
     echo "ERROR: A base branch is required."
@@ -27,8 +28,8 @@ local current_tty="$(tty)";
   fi
 
   if [ -z "$2" ]; then
-    echo "Creating pull request against @@$1@@..."
-    hub pull-request -o -b $1 -h "andrewsc:$(get_git_branch)" > $current_tty
+    echo "Creating pull request against $1..."
+    hub pull-request -o -b $1 -h "$repo_owner:$(get_git_branch)" > $current_tty
   else
     echo "Creating pull request against @@$1@@ from @@$2@@..."
     hub pull-request -o -b $1 -h $2 > $current_tty
