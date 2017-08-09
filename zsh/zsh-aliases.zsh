@@ -36,6 +36,18 @@ local repo_owner=$(git remote show -n origin | grep Fetch | perl -nle "print $& 
   fi
 }
 
+# Git branch delete. Not only should it delete the local but the remote should be deleted as well.
+function gbd() {
+  git bd $1
+
+  local remote=$(git remote show -n origin | grep Fetch | grep -Eo "git.*")
+  local remote_branch_exists=$(git ls-remote --heads $remote $1 | wc -l)
+
+  if [ $remote_branch_exists -eq 1 ]; then
+    git push origin --delete $1
+  fi
+}
+
 # Get the current branch name
 function get_git_branch() {
   local branch_name
