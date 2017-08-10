@@ -20,7 +20,7 @@ function fn() { ls **/*$1* }
 function make_me_a_pr() {
 
 local current_tty="$(tty)";
-local repo_owner=$(git remote show -n origin | grep Fetch | perl -nle "print $& if m{(\w*?)(?=\/)}");
+local repo_owner=$(git config --get remote.origin.url | perl -nle "print $& if m{(\w*?)(?=\/)}");
 
   if [ -z "$1" ]; then
     echo "ERROR: A base branch is required."
