@@ -98,7 +98,7 @@
 [mergetool]
   prompt = false
 [mergetool "diffmerge"]
-  cmd = /usr/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
   keepbackup = false
 [merge]
   summary = true
@@ -119,7 +119,7 @@
 [advice]
   statusHints = false
 [difftool "diffmerge"]
-  cmd = /usr/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [diff]
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
@@ -135,8 +135,8 @@
 [user]
 	name = Andrew Crerar
 	email = andrew@crerar.io
-	signingkey = ADE7EE4CC351E3AC
+	signingkey = 12A684DF2EA923B3
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg2
+	program = /usr/local/MacGPG2/bin/gpg2
