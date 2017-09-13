@@ -130,7 +130,7 @@
 [user]
 	name = Andrew Crerar
 	email = ascrerar@ncsu.edu
-	signingkey = 838941A6A13F5301
+	signingkey = 2D5230EB51DC77AF
 [commit]
 	gpgsign = true
 [gpg]
