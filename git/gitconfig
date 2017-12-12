@@ -133,7 +133,7 @@
 	email = ascrerar@ncsu.edu
 	signingkey = 2D5230EB51DC77AF
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = gpg2
 [hub]
