@@ -20,4 +20,7 @@ else
 
 endif
 
-colorscheme solarized8_dark
+" colorscheme solarized8_dark
+
+set background=dark
+colorscheme solarized

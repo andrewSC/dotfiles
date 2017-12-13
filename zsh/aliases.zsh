@@ -96,6 +96,7 @@ alias guu='git checkout master && git fetch upstream && git pull upstream master
 alias gm='git merge'
 alias gms='git merge --squash'
 alias gam='git amend --reset-author'
+alias gom='git checkout master && git fetch origin && git pull origin master'
 alias grv='git remote -v'
 alias grr='git remote rm'
 alias grad='git remote add'

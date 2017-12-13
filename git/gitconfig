@@ -28,8 +28,8 @@
   bd = branch -D                    # branch delete
 
   # commit
-  c = commit -S -m                  # commit with message
-  ca = commit -S -am                # commit all with message
+  c = commit  -m                  # commit with message
+  ca = commit -am                # commit all with message
   ci = commit                       # commit
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
@@ -135,8 +135,8 @@
 [user]
 	name = Andrew Crerar
 	email = andrew@crerar.io
-	signingkey = 12A684DF2EA923B3
+	signingkey = C6233CFEE497E06C
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg2
