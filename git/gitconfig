@@ -28,8 +28,8 @@
   bd = branch -D                    # branch delete
 
   # commit
-  c = commit -S -m                  # commit with message
-  ca = commit -S -am                # commit all with message
+  c = commit -m                     # commit with message
+  ca = commit -am                   # commit all with message
   ci = commit                       # commit
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
