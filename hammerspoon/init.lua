@@ -100,7 +100,7 @@ hs.hotkey.bind({"alt", "cmd"}, "L", function()
 end)
 
 -- Left 2/3 Screen
-hs.hotkey.bind({"ctrl", "cmd"}, "J", function()
+hs.hotkey.bind({"shift", "cmd", "alt"}, "J", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
@@ -114,7 +114,7 @@ hs.hotkey.bind({"ctrl", "cmd"}, "J", function()
 end)
 
 -- Right 2/3 Screen
-hs.hotkey.bind({"ctrl", "cmd"}, "L", function()
+hs.hotkey.bind({"shift", "cmd", "alt"}, "L", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
   local screen = win:screen()
