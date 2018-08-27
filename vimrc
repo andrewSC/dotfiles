@@ -136,3 +136,7 @@ set synmaxcol=200
 
 " Auto resize splits when the editor is resized
 autocmd VimResized * wincmd =
+
+" Move blocks visually
+vnoremap J :m '>+1<CR>gv=gv'
+vnoremap K :m '<-2<CR>gv=gv'

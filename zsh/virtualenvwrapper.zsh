@@ -1,7 +1,6 @@
 # Add and execute the virtualenvwrapper script
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Dev
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PROMPT_COMMAND="prompt"

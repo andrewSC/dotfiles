@@ -3,5 +3,6 @@ path=(
   $path
   $HOME/.yadr/bin
   $HOME/.yadr/bin/yadr
+  $HOME/Library/Python/3.7/bin
 )
 

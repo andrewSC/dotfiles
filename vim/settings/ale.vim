@@ -4,6 +4,8 @@ let g:ale_lint_on_enter = 0
 "show the error list automatically
 let g:ale_open_list=1
 
+let g:ale_linters = {'javascript': []}
+
 "set the max line length for python files as well as ignore some things
 let g:ale_python_pylint_options="--max-line-length=150 --disable=W,missing-docstring"
 
