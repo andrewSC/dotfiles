@@ -20,6 +20,7 @@ function fn() { ls **/*$1* }
 function make_me_a_pr() {
 
 local current_tty="$(tty)";
+local repo_owner=$(git config --get remote.origin.url | perl -nle "print $& if m{(\w*?)(?=\/)}");
 
   if [ -z "$1" ]; then
     echo "ERROR: A base branch is required."
@@ -28,10 +29,22 @@ local current_tty="$(tty)";
 
   if [ -z "$2" ]; then
     echo "Creating pull request against @@$1@@..."
-    hub pull-request -o -b $1 -h "andrewsc:$(get_git_branch)" > $current_tty
+    hub pull-request -o -b $1 -h "$repo_owner:$(get_git_branch)" > $current_tty
   else
     echo "Creating pull request against @@$1@@ from @@$2@@..."
     hub pull-request -o -b $1 -h $2 > $current_tty
+  fi
+}
+
+# Git branch delete. Not only should it delete the local but the remote should be deleted as well.
+function gbd() {
+  git bd $1
+
+  local remote=$(git remote show -n origin | grep Fetch | grep -Eo "git.*")
+  local remote_branch_exists=$(git ls-remote --heads $remote $1 | wc -l)
+
+  if [ $remote_branch_exists -eq 1 ]; then
+    git push origin --delete $1
   fi
 }
 
