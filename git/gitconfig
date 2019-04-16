@@ -93,7 +93,7 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
@@ -101,7 +101,7 @@
 [merge]
   summary = true
   verbosity = 1
-	tool = diffmerge
+  tool = diffmerge
 [apply]
   whitespace = nowarn
 [branch]
@@ -120,8 +120,8 @@
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
-	algorithm = patience
-	tool = diffmerge
+  algorithm = patience
+  tool = diffmerge
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -129,19 +129,19 @@
 [include]
   path = .gitconfig.user
 [user]
-	name = Andrew Crerar
-	email = ascrerar@ncsu.edu
-	signingkey = 2D5230EB51DC77AF
+  name = Andrew Crerar
+  email = ascrerar@ncsu.edu
+  signingkey = 2D5230EB51DC77AF
 [commit]
-	gpgsign = false
+  gpgsign = false
 [gpg]
-	program = gpg2
+  program = gpg2
 [hub]
-	host = github.ncsu.edu
+  host = github.ncsu.edu
 [difftool "diffmerge"]
-	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+  cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [mergetool "diffmerge"]
-	trustExitCode = true
-	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+  trustExitCode = true
+  cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [init]
-	templatedir = /Users/ascrerar/.yadr/git/git_templates
+  templatedir = /Users/ascrerar/.yadr/git/git_templates

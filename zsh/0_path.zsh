@@ -5,3 +5,4 @@ path=(
   $HOME/.yadr/bin/yadr
 )
 
+export ANSIBLE_ROLES_PATH=/Users/ascrerar/.ansible/roles
